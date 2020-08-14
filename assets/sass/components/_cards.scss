@@ -1,0 +1,37 @@
+.card{
+    border: solid black 1px;
+    background-color: burlywood;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+
+    .card-container{
+        padding: 2px 16px;
+        background-color: cadetblue;
+        display: flex;
+        flex-direction: column;
+        font-family: $raleway;
+        justify-content: space-around;
+
+            .titulos{
+                border-bottom: solid 1px $nickel;
+            &__title{
+                font-size: $x-large;
+                font-weight: $regular;
+                    }
+            &__subtitle{
+                font-size: $xxxx-large;
+                }
+                    }
+        &__listado{
+            list-style-type: none;
+            padding-bottom: 50%;
+            border-bottom: solid 1px ;
+        }            
+        &__boton{
+           align-self: flex-end;
+           
+        }
+    }
+    }

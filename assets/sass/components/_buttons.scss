@@ -1,0 +1,32 @@
+.button{
+padding: .7rem 2rem;
+font-size: 12px;
+color: white;
+background-color: darkorchid;
+
+&_regular{
+padding: .6rem 1rem;
+font-size: 12px;
+color: white;
+background-color: $ball-blue;
+border-width: 0;
+letter-spacing: 0.1em;
+font-size: $small;
+font-weight: $bold;
+&:hover{
+    background-color:$middle-blue;
+}
+}
+
+&_large{
+    padding: 0.5rem 5rem;
+    font-size: 16px;
+    &:hover{
+     background-color: gold;
+    }
+    &:focus{
+        background-color: green;
+    }
+}
+}
+

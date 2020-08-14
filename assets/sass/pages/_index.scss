@@ -1,0 +1,58 @@
+//----------------------Grillas-------------------------------------------
+
+.container{
+max-width: 100%;
+display: grid;
+}
+
+.nav{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.hero{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    background-color: chocolate;
+}
+
+.caracteristicas{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: red;
+}
+.precios{
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background-color: blue;
+}
+
+.footer{
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    background-color: forestgreen;
+}
+//seccion precios
+.precio{
+    display: flex;
+    justify-content: center;
+
+    .card-precio{
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+}
+
+@media (max-width:800px)
+{
+    .precio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-precio{
+        margin-bottom: 30px;
+    }
+     
+}
