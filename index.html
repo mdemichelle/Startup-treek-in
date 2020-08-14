@@ -34,14 +34,33 @@
            </div>
            </div>
            <div class="header__dropdown dropdown">
+           <ul id="links" class="active">
+            <li><a href="">Acerca de</a></li>
+            <li><a href="">Características</a></li>
+            <li><a href="">Precios</a></li>
+            <li><a href="">Iniciar Sesión</a></li>
+            <li><a href="">Regístrate</a></li>
+           </ul>
+           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fas fa-bars"></i>
-           </div>
+        </a>
+           
+        </div>
        </nav>
        <section class="hero">hero</section>
        <section class="caracteristicas">caracteristicas</section>
        <article class="precios">precios</article>
        <footer class="footer">footer</footer>
    </main>
-   
+   <script>
+    function myFunction() {
+      var x = document.getElementById("links");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+    </script>
 </body>
 </html>

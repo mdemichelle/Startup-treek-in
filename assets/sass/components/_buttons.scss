@@ -16,6 +16,9 @@ font-weight: $bold;
 &:hover{
     background-color:$middle-blue;
 }
+&:focus{
+    background-color:$lavender-gray;
+}
 }
 
 &_large{
@@ -25,7 +28,7 @@ font-weight: $bold;
      background-color: gold;
     }
     &:focus{
-        background-color: green;
+        background-color: $lavender-gray;
     }
 }
 }

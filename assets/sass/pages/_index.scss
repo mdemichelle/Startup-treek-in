@@ -3,17 +3,21 @@
 .container{
 max-width: 100%;
 display: grid;
+
 }
 
-.nav{
+.header{
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    
 }
 
 .hero{
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     background-color: chocolate;
+    padding: 15px;
+    margin-top: 70px;
 }
 
 .caracteristicas{
@@ -44,7 +48,7 @@ display: grid;
 
 }
 
-@media (max-width:800px)
+@include respond-to($bp-sm)
 {
     .precio{
         display: flex;

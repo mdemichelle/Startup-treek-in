@@ -18,14 +18,21 @@ li {
   padding: 0;
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  background-color: #FFF;
+}
+
 .logo {
   height: 40px;
   width: 40px;
   background-image: url("../img/Logo.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  margin-right: 15px;
-  margin-left: 5px;
+  margin-right: 10px;
+  margin-left: 20px;
   margin-top: 10px;
   float: left;
 }
@@ -36,10 +43,12 @@ li {
   justify-content: space-between;
   padding: 15px 0;
   font-size: 1rem;
+  margin-right: 20px;
 }
 .nav__lista {
   display: flex;
   align-items: center;
+  margin-left: 10px;
 }
 .nav__acceder {
   display: flex;
@@ -60,7 +69,7 @@ li {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .header {
     display: flex;
     justify-content: space-between;
@@ -71,8 +80,33 @@ li {
   }
   .header .dropdown {
     display: flex;
-    margin-right: 15px;
+    margin-right: 25px;
+    margin-top: 10px;
     font-size: 1.25rem;
+    overflow: hidden;
+    font-size: 0.875rem;
+  }
+  .header .dropdown i {
+    font-size: 1.25rem;
+  }
+  .header .dropdown #links {
+    display: none;
+  }
+  .header .dropdown .active {
+    margin-right: 20px;
+    width: 500px;
+    -webkit-box-shadow: 4px 7px 5px -3px rgba(145, 132, 145, 0.18);
+    -moz-box-shadow: 4px 7px 5px -3px rgba(145, 132, 145, 0.18);
+    box-shadow: 4px 7px 5px -3px rgba(145, 132, 145, 0.18);
+  }
+  .header .dropdown .active li {
+    display: flex;
+    flex-direction: column;
+    padding: 14px 16px;
+    border-bottom: #8F9199;
+  }
+  .header .dropdown .active li:hover {
+    color: #726F73;
   }
 }
 .button {
@@ -94,6 +128,9 @@ li {
 .button_regular:hover {
   background-color: #77D1DD;
 }
+.button_regular:focus {
+  background-color: #C7C8CC;
+}
 .button_large {
   padding: 0.5rem 5rem;
   font-size: 16px;
@@ -102,7 +139,7 @@ li {
   background-color: gold;
 }
 .button_large:focus {
-  background-color: green;
+  background-color: #C7C8CC;
 }
 
 .card {
@@ -145,7 +182,7 @@ li {
   display: grid;
 }
 
-.nav {
+.header {
   grid-column: 1/2;
   grid-row: 1/2;
 }
@@ -154,6 +191,8 @@ li {
   grid-column: 1/2;
   grid-row: 2/3;
   background-color: chocolate;
+  padding: 15px;
+  margin-top: 70px;
 }
 
 .caracteristicas {
@@ -183,7 +222,7 @@ li {
   margin-left: 40px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 576px) {
   .precio {
     display: flex;
     flex-direction: column;
