@@ -1,66 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
       integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Treek-in</title>
-</head>
-<body>
-   <main class="container">
-       <nav class="header">
+  </head>
+  <body>
+    <main class="container">
+      <nav class="header">
         <div class="logo"></div>
-           <div class="nav">
-           
-           <div class="nav__lista">
-            
-               <ul class="nav__navigation">
-                   <li><a href="">Acerca de</a></li>
-                   <li><a href="">Características</a></li>
-                   <li><a href="">Precios</a></li>
-               </ul>
-           </div>
-           <div class="nav__acceder">
-               <ul class="nav__navigation">
-                   <li><a href="">Iniciar Sesión</a></li>
-                   <li><button class="button button_regular">Registrate</button></li>
-               </ul>
-           </div>
-           </div>
-           <div class="header__dropdown dropdown">
-           <ul id="links" class="active">
+        <div class="nav">
+          <div class="nav__lista">
+            <ul class="nav__navigation">
+              <li><a href="">Acerca de</a></li>
+              <li><a href="">Características</a></li>
+              <li><a href="">Precios</a></li>
+            </ul>
+          </div>
+          <div class="nav__acceder">
+            <ul class="nav__navigation">
+              <li><a href="">Iniciar Sesión</a></li>
+              <li><button class="button button_regular">Registrate</button></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__dropdown dropdown">
+          <ul id="links" class="active">
             <li><a href="">Acerca de</a></li>
             <li><a href="">Características</a></li>
             <li><a href="">Precios</a></li>
             <li><a href="">Iniciar Sesión</a></li>
             <li><a href="">Regístrate</a></li>
-           </ul>
-           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          </ul>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fas fa-bars"></i>
-        </a>
-           
+          </a>
         </div>
-       </nav>
-       <section class="hero">hero</section>
-       <section class="caracteristicas">caracteristicas</section>
-       <article class="precios">precios</article>
-       <footer class="footer">footer</footer>
-   </main>
-   <script>
-    function myFunction() {
-      var x = document.getElementById("links");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
+      </nav>
+      <section class="hero">
+
+        <div class="hero__contenedor-hero">
+          <div class="info-principal">
+            <h2 class="titulo">Haz trekking sin Parar</h2>
+            <p class="parrafo">Con Trekk-in te despreocuparás de la estimación de tu viaje, ya que con unos simples
+              pasos podrás definir la mejor ruta a tomar con tus compañeros de expedición.
+            </p>
+          </div>
+          <div class="fondo"></div>
+          
+        </div>
+      </section>
+      <section class="caracteristicas">caracteristicas</section>
+      <article class="precios">precios</article>
+      <footer class="footer">footer</footer>
+    </main>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("links");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
       }
-    }
     </script>
-</body>
+  </body>
 </html>
