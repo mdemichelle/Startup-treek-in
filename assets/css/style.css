@@ -117,8 +117,7 @@ li {
 }
 .button_regular {
   padding: 0.6rem 1rem;
-  font-size: 12px;
-  color: white;
+  color: #FFF;
   background-color: #2AB7CA;
   border-width: 0;
   letter-spacing: 0.1em;
@@ -133,7 +132,11 @@ li {
 }
 .button_large {
   padding: 0.5rem 5rem;
-  font-size: 16px;
+  border-width: 0;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  font-weight: 700;
+  background-color: #2AB7CA;
 }
 .button_large:hover {
   background-color: #77D1DD;
@@ -144,21 +147,22 @@ li {
 
 .card {
   border: solid black 1px;
-  background-color: burlywood;
-  width: 300px;
-  height: 400px;
+  background-color: #FFF;
+  width: 20rem;
+  height: 26rem;
   display: flex;
   justify-content: center;
 }
 .card .card-container {
-  padding: 2px 16px;
-  background-color: cadetblue;
+  padding: 2px 16px 25px;
   display: flex;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
   justify-content: space-around;
 }
 .card .card-container .titulos {
+  padding-top: 15px;
+  padding-bottom: 0.9375rem;
   border-bottom: solid 1px #726F73;
 }
 .card .card-container .titulos__title {
@@ -166,15 +170,20 @@ li {
   font-weight: 400;
 }
 .card .card-container .titulos__subtitle {
-  font-size: 2.8125rem;
+  font-size: 2.5rem;
 }
 .card .card-container__listado {
   list-style-type: none;
   padding-bottom: 50%;
   border-bottom: solid 1px;
+  font-size: 0.75rem;
+  margin-top: 10px;
 }
-.card .card-container__boton {
-  align-self: flex-end;
+.card .card-container__listado li {
+  margin-bottom: 15px;
+}
+.card .card-container .button {
+  width: 100%;
 }
 
 .container {
@@ -197,13 +206,11 @@ li {
 .caracteristicas {
   grid-column: 1/2;
   grid-row: 3/4;
-  background-color: red;
 }
 
 .precios {
   grid-column: 1/2;
   grid-row: 4/5;
-  background-color: blue;
 }
 
 .footer {
@@ -219,15 +226,16 @@ li {
 .hero__contenedor-hero {
   display: flex;
   justify-content: left;
-  margin-left: 5%;
+  margin-left: 4%;
   height: 43.75rem;
   background-image: url("../img/bg-hero.svg");
   background-repeat: no-repeat;
   background-position: right;
 }
 .hero__contenedor-hero .info-principal {
-  width: 23%;
+  width: 18.75rem;
   margin-top: 15px;
+  margin-left: 5%;
 }
 .hero__contenedor-hero .info-principal .titulo {
   font-size: 2.1875rem;
@@ -238,11 +246,81 @@ li {
   line-height: 1.5625rem;
 }
 
-.precio {
+@media (max-width: 768px) {
+  .hero__contenedor-hero {
+    background-size: 150%;
+  }
+}
+@media (max-width: 576px) {
+  .hero__contenedor-hero {
+    display: flex;
+    justify-content: center;
+    background-size: 100%;
+  }
+}
+.caracteristicas {
+  margin-bottom: 2.5rem;
+}
+.caracteristicas__titulo {
+  text-align: center;
+  font-size: 1.875rem;
+  margin-bottom: 40px;
+}
+.caracteristicas__columnas {
+  display: flex;
+  justify-content: space-around;
+}
+.caracteristicas__columnas .grafico {
+  width: 18.75rem;
+}
+.caracteristicas__columnas .info-caract {
+  width: 18.75rem;
+  margin-top: 15px;
+}
+.caracteristicas__columnas .info-caract .titulo {
+  font-size: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+.caracteristicas__columnas .info-caract .parrafo {
+  font-size: 0.75rem;
+  line-height: 1.5625rem;
+}
+
+@media (max-width: 768px) {
+  .caracteristicas {
+    margin-bottom: 1.875rem;
+  }
+  .caracteristicas__columnas {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .caracteristicas__columnas .grafico {
+    margin-bottom: 30px;
+    align-content: center;
+  }
+  .caracteristicas__columnas .info-caract {
+    align-self: center;
+    margin-top: 20px;
+  }
+}
+.precios {
+  background-image: url("../img/bg-price.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.precios__titulo {
+  text-align: center;
+  color: #FFF;
+}
+.precios .contenedor-precios {
+  padding-top: 15%;
+}
+.precios .contenedor-precios .precio {
   display: flex;
   justify-content: center;
+  padding-top: 5%;
 }
-.precio .card-precio {
+.precios .contenedor-precios .precio .card-precio {
   margin-right: 40px;
   margin-left: 40px;
 }

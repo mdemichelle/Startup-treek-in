@@ -21,12 +21,12 @@
 .caracteristicas {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
-  background-color: red;
+  
 }
 .precios {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
-  background-color: blue;
+ 
 }
 
 .footer {
@@ -43,7 +43,7 @@
 
     display: flex;
     justify-content: left;
-    margin-left: 5%;
+    margin-left: 4%;
    
     height: 43.75rem;
     background-image: url('../img/bg-hero.svg');
@@ -53,8 +53,9 @@
     
  
     & .info-principal{
-        width: 23%;
+        width: 18.75rem;
         margin-top: 15px;
+        margin-left: 5%;
         .titulo{
             font-size: $xx-large;
             margin-bottom: 0.625rem;
@@ -68,15 +69,105 @@
     }
     }
 }
+@include respond-to($bp-md){
+  .hero{
+    &__contenedor-hero{
+      background-size: 150%;
+    }
+  }
+}
+@include respond-to($bp-sm){
+ .hero{
+
+   &__contenedor-hero{
+    display: flex;
+    justify-content: center;
+    background-size: 100%;
+    
+  
+   }
+ }
+}
+
+//-------------------------------------Seccion Caracteristicas---------------------------------------------
+.caracteristicas{
+ margin-bottom: 2.5rem;
+
+  &__titulo{
+    text-align: center;
+    font-size: $x-large;
+    margin-bottom:40px;
+  }
+
+  &__columnas{
+    display: flex;
+    justify-content: space-around;
+    
+    .grafico{
+     width: 18.75rem;
+     
+    }
+    .info-caract{
+      
+      width: 18.75rem;
+      margin-top: 15px;
+     
+    .titulo{
+      font-size: $large;
+      margin-bottom: 0.625rem;
+    }
+
+    .parrafo{
+      font-size: $x-small;
+      line-height: 1.5625rem;
+    }
+  }
+  }
+}
+
+@include respond-to($bp-md){
+  .caracteristicas{
+    margin-bottom: 1.875rem;
+    &__columnas{
+      display: flex;
+      flex-wrap: wrap;
+      .grafico{
+        margin-bottom: 30px;
+        align-content: center;
+      
+      }
+      .info-caract{
+        align-self: center;
+        margin-top: 20px;
+      }
+    }
+  }
+}
 //-----------------------------------seccion precios--------------------------------------------------
+.precios{
+  background-image: url('../img/bg-price.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  &__titulo{
+    text-align: center;
+    color:$white;
+  }
+  .contenedor-precios{
+    padding-top: 15%;
+    
+ 
 .precio {
   display: flex;
   justify-content: center;
+  padding-top: 5%;
 
   .card-precio {
     margin-right: 40px;
     margin-left: 40px;
   }
+}
+}
 }
 
 @include respond-to($bp-sm) {
