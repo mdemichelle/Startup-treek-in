@@ -146,12 +146,13 @@ li {
 }
 
 .card {
-  border: solid black 1px;
   background-color: #FFF;
   width: 20rem;
   height: 26rem;
   display: flex;
   justify-content: center;
+  box-shadow: 0 4px 8px 0 #BABABA;
+  transition: 0.3s;
 }
 .card .card-container {
   padding: 2px 16px 25px;
@@ -184,6 +185,10 @@ li {
 }
 .card .card-container .button {
   width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 #E8E8E8;
 }
 
 .container {
@@ -314,6 +319,7 @@ li {
 }
 .precios .contenedor-precios {
   padding-top: 15%;
+  padding-bottom: 5%;
 }
 .precios .contenedor-precios .precio {
   display: flex;
@@ -326,13 +332,19 @@ li {
 }
 
 @media (max-width: 576px) {
-  .precio {
+  .precios {
+    background-image: url("../img/bg-price.png");
+    background-size: 150% 100%;
+  }
+  .precios .contenedor-precios {
+    padding-top: 13.75rem;
+  }
+  .precios .contenedor-precios .precio {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
-  .card-precio {
+  .precios .contenedor-precios .card-precio {
     margin-bottom: 30px;
   }
 }

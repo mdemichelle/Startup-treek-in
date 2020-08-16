@@ -155,6 +155,7 @@
   }
   .contenedor-precios{
     padding-top: 15%;
+    padding-bottom: 5%;
     
  
 .precio {
@@ -171,6 +172,14 @@
 }
 
 @include respond-to($bp-sm) {
+
+  .precios{
+  background-image: url("../img/bg-price.png");
+   background-size: 150% 100%;
+
+  .contenedor-precios{
+    padding-top:13.75rem;
+  
   .precio {
     display: flex;
     flex-direction: column;
@@ -178,5 +187,7 @@
   }
   .card-precio {
     margin-bottom: 30px;
+  }
+}
   }
 }

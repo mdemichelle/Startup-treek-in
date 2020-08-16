@@ -1,10 +1,12 @@
 .card{
-    border: solid black 1px;
+    
     background-color: $white;
     width: 20rem;
     height: 26rem;
     display: flex;
     justify-content: center;
+    box-shadow: 0 4px 8px 0 $gray;
+    transition: 0.3s;
 
     .card-container{
         padding: 2px 16px 25px;
@@ -41,4 +43,8 @@
             
         }
     }
+    }
+
+    .card:hover{
+        box-shadow: 0 8px 16px 0 $platinum;
     }
