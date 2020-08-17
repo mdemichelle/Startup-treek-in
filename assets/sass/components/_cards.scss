@@ -48,3 +48,22 @@
     .card:hover{
         box-shadow: 0 8px 16px 0 $platinum;
     }
+
+
+@include respond-to($bp-md){
+    .card{
+        width: 50%;
+        height: 100% auto;
+        .card-container{
+            
+            padding: 30px 10px 45px 20px;
+
+            &__listado{
+                li{
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+   
+}

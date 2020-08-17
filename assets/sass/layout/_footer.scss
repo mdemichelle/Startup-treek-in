@@ -1,0 +1,39 @@
+//-------------------------------------Footer----------------------------------------------------------------------
+.footer{
+    padding: 0.9375rem 1.875rem;
+    background-color: $raising-black;
+    height: 90%;
+    color: $silver-chalice;
+    display:flex;
+    align-items: center;
+    font-size: $small;
+    &__items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px 0 20px;
+   
+
+  li{
+    margin: 0.125rem 0.625rem;
+    white-space: wrap;
+
+    @include respond-to($bp-md){
+        li{
+            flex-wrap: wrap;
+        }
+    }
+    
+  }
+
+  li:nth-last-child(2){
+    flex: 1;
+  }
+
+  li:hover{
+      color:$platinum;
+  }
+    }
+}
+
+  

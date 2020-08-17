@@ -32,7 +32,6 @@
 .footer {
   grid-column: 1 / 2;
   grid-row: 5 / 6;
-  background-color: forestgreen;
 }
 
 //-------------------------------------seccion hero--------------------------------------------------
@@ -105,7 +104,7 @@
     
     .grafico{
      width: 18.75rem;
-     
+     animation: difuminar 1s ease-in;
     }
     .info-caract{
       
@@ -170,7 +169,11 @@
 }
 }
 }
-
+@include respond-to($bp-md){
+  .card-precio{
+    width: 50%;
+  }
+}
 @include respond-to($bp-sm) {
 
   .precios{
@@ -183,6 +186,7 @@
   .precio {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   .card-precio {
